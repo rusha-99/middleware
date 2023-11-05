@@ -23,7 +23,7 @@ public class UserService {
 
 
 
-    public void deactivateService(String userId, Integer serviceId) {
+    public void deactivateService( byte[] userId, Integer serviceId) {
         activatedservicesRepository.deactivateService(userId,serviceId);
     }
 }

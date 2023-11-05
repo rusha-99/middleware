@@ -49,12 +49,12 @@ const handleCheckboxChange = async (item, isChecked) => {
   try {
     if (isChecked) {
       const response = await axios.post(
-        `http://localhost:8080/api/v1/user/activateService/userOne/${item.serviceId}`
+        `http://localhost:8080/api/v1/user/activateService/user3/${item.serviceId}`
       )
       console.log(response.data)
     } else {
       const response = await axios.delete(
-        `http://localhost:8080/api/v1/user/deactivateService/userOne/${item.serviceId}`
+        `http://localhost:8080/api/v1/user/deactivateService/user3/${item.serviceId}`
       )
       console.log(response.data)
     }

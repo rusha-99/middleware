@@ -11,5 +11,5 @@ public interface ActivatedservicesRepository extends JpaRepository<Activatedserv
     @Modifying
     @Transactional
     @Query(value = "DELETE FROM activatedservices WHERE userId = :userId AND serviceId = :serviceId", nativeQuery = true)
-    void deactivateService(String userId, Integer serviceId);
+    void deactivateService(byte[] userId, Integer serviceId);
 }

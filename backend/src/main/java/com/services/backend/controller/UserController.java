@@ -34,7 +34,7 @@ public class UserController {
     }
 
     @PostMapping("/activateService/{userId}/{serviceId}")
-    public String activateService(@PathVariable String userId, @PathVariable Integer serviceId) {
+    public String activateService(@PathVariable  byte[] userId, @PathVariable Integer serviceId) {
         Activatedservices activatedService = new Activatedservices();
         activatedService.setUserId(userId);
         activatedService.setServiceId(serviceId);
@@ -46,7 +46,7 @@ public class UserController {
 
 
     @DeleteMapping("/deactivateService/{userId}/{serviceId}")
-    public String deactivateService(@PathVariable String userId, @PathVariable Integer serviceId){
+    public String deactivateService(@PathVariable  byte[] userId, @PathVariable Integer serviceId){
 
         userService.deactivateService(userId,serviceId);
         return "Service deactivated successfully";

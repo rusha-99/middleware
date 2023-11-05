@@ -12,8 +12,9 @@ import lombok.*;
 @Table(name = "\"user\"")
 public class User {
     @Id
+    @Lob
     @Column(name="userId")
-    private String userId;
+    private byte[] userId;
 
     @Column(name="userName")
     private String userName;

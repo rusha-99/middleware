@@ -21,5 +21,5 @@ public class Activatedservices {
     private int serviceId;
 
     @Column(name="userId")
-    private String userId;
+    private  byte[] userId;
 }
